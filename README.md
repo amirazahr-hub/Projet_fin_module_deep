@@ -1,32 +1,51 @@
-#  Projet Final de Deep Learning (PyTorch)
+# Projet Final - Deep Learning (EMSI)
 
-## Idée Générale du Projet
-Ce projet contient mon travail d'évaluation final sur l'apprentissage profond avec **PyTorch**. Il est divisé en 3 parties principales :
-
-1. **Partie I : Analyse de données (MLP)**
-   - **Objectif :** Prédire si un logement en Californie est cher ou non (Classification binaire).
-   - **Technique :** Création d'un réseau de neurones classique (Multi-Layer Perceptron), gestion de la sauvegarde du meilleur modèle, et affichage des graphiques de performance.
-
-2. **Partie II : Reconnaissance d'images (CNN)**
-   - **Objectif :** Reconnaître et classer des images en couleur (avions, voitures, oiseaux, etc.) du dataset **CIFAR-10**.
-   - **Technique :** Création d'un réseau de neurones convolutif (CNN). Cette partie contient aussi du code écrit manuellement (sans PyTorch) pour comprendre le fonctionnement de la convolution et du pooling.
-
-3. **Partie III : Traduction automatique (NLP)**
-   - **Objectif :** Traduire des phrases simples du Français vers l'Anglais.
-   - **Technique :** Utilisation d'un modèle de type *Seq2Seq* (Séquence à Séquence) avec un mécanisme d'Attention pour lier les mots correctement.
+Ce dépôt contient l'ensemble des travaux pratiques et des projets réalisés dans le cadre du module de Deep Learning. Le projet est structuré en trois grandes parties, explorant différentes architectures de réseaux de neurones (MLP, CNN et RNN) appliquées à des cas d'usage variés.
 
 ---
 
-##  Structure du Repository
-* `Untitled2 (1).ipynb` : Le fichier contenant tout le code source, les entraînements et les résultats visuels.
-* `README.md` : Ce fichier texte qui explique le projet.
+##  Structure du Projet
+
+Le projet est divisé en trois notebooks principaux :
+
+### 1. Partie I : Classification de Revenus avec un Perceptron Multicouche (MLP)
+* **Fichier :** `partie1_mlp_adult_income.ipynb`
+* **Objectif :** Prédire si le revenu d'un individu dépasse 50k\$/an en se basant sur des données démographiques (Dataset *Adult Income*).
+* **Concepts clés :**
+  * Prétraitement de données tabulaires (encodage *One-Hot*, normalisation).
+  * Gestion du déséquilibre des classes (*Class Weights* / Rééchantillonnage).
+  * Conception d'une architecture MLP (Couches denses, Dropout, BatchNorm).
+  * Évaluation de la performance (Courbe ROC, Matrice de confusion, F1-Score).
+
+### 2. Partie II : Classification d'Images de Mode avec un Réseau de Neurones Convolutif (CNN)
+* **Fichier :** `partie2_cnn_fashionmnist.ipynb`
+* **Objectif :** Reconnaître et classifier des vêtements et accessoires à partir d'images en niveaux de gris (Dataset *Fashion-MNIST*).
+* **Concepts clés :**
+  * Manipulation et augmentation de données d'images (PyTorch `Transforms`).
+  * Architecture CNN personnalisée (Convolutions 2D, Max Pooling, Flatten).
+  * Analyse des erreurs de prédiction (Visualisation des prédictions correctes vs incorrectes).
+
+### 3. Partie III : Modélisation de Séquences et Traduction avec RNN / Seq2Seq
+* **Fichier :** `Partie_III_RNN_Seq2Seq.ipynb`
+* **Objectif :** Implémenter et comparer des architectures de réseaux de neurones récurrents pour le traitement du langage naturel (NLP).
+* **Concepts clés :**
+  * Tokenisation, création de vocabulaire et *Padding* de séquences textuelles.
+  * Modèles Récurrents fondamentaux : **RNN**, **LSTM**, et **GRU**.
+  * Évaluation de modèles de langage via la métrique de **Perplexité**.
+  * Architecture Avancée : Modèle **Seq2Seq** (Encodeur-Décodeur).
 
 ---
 
-##  Outils utilisés
-* **Framework principal :** PyTorch
-* **Visualisation :** Matplotlib et Seaborn (pour les courbes de perte et les matrices de confusion)
-* **Traitement de données :** Pandas, NumPy et Scikit-Learn
+##  Installation et Utilisation
+
+### Prérequis
+Pour exécuter ces notebooks, vous devez disposer d'un environnement Python avec les bibliothèques suivantes installées :
+* PyTorch
+* Torchvision
+* NumPy
+* Pandas
+* Matplotlib
+* Scikit-Learn
 
 ---
 
